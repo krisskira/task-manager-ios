@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		63D46F6D2D29B5DE0012C76A /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 63D46F6C2D29B5DE0012C76A /* Alamofire */; };
+		63D46F752D2B1A750012C76A /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 63D46F742D2B1A750012C76A /* KeychainAccess */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		63D46F1B2D28F4230012C76A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -29,9 +34,22 @@
 		63D46F242D28F4240012C76A /* task-managerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "task-managerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		63D46F662D29A6CC0012C76A /* Exceptions for "task-manager" folder in "task-manager" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 63D46F072D28F4210012C76A /* task-manager */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		63D46F0A2D28F4210012C76A /* task-manager */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				63D46F662D29A6CC0012C76A /* Exceptions for "task-manager" folder in "task-manager" target */,
+			);
 			path = "task-manager";
 			sourceTree = "<group>";
 		};
@@ -52,6 +70,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63D46F752D2B1A750012C76A /* KeychainAccess in Frameworks */,
+				63D46F6D2D29B5DE0012C76A /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +132,8 @@
 			);
 			name = "task-manager";
 			packageProductDependencies = (
+				63D46F6C2D29B5DE0012C76A /* Alamofire */,
+				63D46F742D2B1A750012C76A /* KeychainAccess */,
 			);
 			productName = "task-manager";
 			productReference = 63D46F082D28F4210012C76A /* task-manager.app */;
@@ -195,6 +217,10 @@
 			);
 			mainGroup = 63D46EFF2D28F4210012C76A;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				63D46F6B2D29B5DE0012C76A /* XCRemoteSwiftPackageReference "Alamofire" */,
+				63D46F732D2B1A750012C76A /* XCRemoteSwiftPackageReference "KeychainAccess" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 63D46F092D28F4210012C76A /* Products */;
 			projectDirPath = "";
@@ -393,12 +419,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "task-manager/task-manager.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"task-manager/Preview Content\"";
 				DEVELOPMENT_TEAM = 2276EYPC4M;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "task-manager/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Task Manager";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -422,12 +451,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "task-manager/task-manager.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"task-manager/Preview Content\"";
 				DEVELOPMENT_TEAM = 2276EYPC4M;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "task-manager/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Task Manager";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -558,6 +590,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		63D46F6B2D29B5DE0012C76A /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.10.2;
+			};
+		};
+		63D46F732D2B1A750012C76A /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		63D46F6C2D29B5DE0012C76A /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 63D46F6B2D29B5DE0012C76A /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		63D46F742D2B1A750012C76A /* KeychainAccess */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 63D46F732D2B1A750012C76A /* XCRemoteSwiftPackageReference "KeychainAccess" */;
+			productName = KeychainAccess;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 63D46F002D28F4210012C76A /* Project object */;
 }
